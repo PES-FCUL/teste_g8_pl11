@@ -33,4 +33,15 @@ class SimulacaoTest {
         assertTrue(bola.getY() >= Simulacao.RAIO, "y abaixo do limite: " + bola.getY());
         assertTrue(bola.getY() <= Simulacao.ALTURA - Simulacao.RAIO, "y acima do limite: " + bola.getY());
     }
+    @Test
+    void deslocaNoSentidoDaVelocidade() {
+        Simulacao simulacao = novaSimulacao();
+        Bola bola = simulacao.getBola();
+
+        double dt = 0.1;
+        simulacao.passo(dt);
+
+        assertEquals(4.3 + (-2.6) * dt, bola.getX(), EPS);
+        assertEquals(4.8 + 2.0 * dt, bola.getY(), EPS);
+    }
 }
