@@ -22,6 +22,25 @@ class SimulacaoTest {
     }
 
     @Test
+    void bolaMexe() {
+        Simulacao simulacao = novaSimulacao();
+        // Bola mexe-se ao passar tempo na simulacao
+        for (int i = 0; i < 10; i++) {
+            Bola bola = simulacao.getBola();
+            // Confirma velocidade da Bola está posta.
+            assertEquals(2.2, bola.getVx());
+            assertEquals(2.2, bola.getVy());
+
+            // Confirma posição esperada
+            double expectedPositionX = 5.1 + (bola.getVx() * i);
+            double expectedPositionY = 6.3 + (bola.getVy() * i);
+            assertEquals(expectedPositionX, bola.getX()); // Confirma posicao x
+            assertEquals(expectedPositionY, bola.getY()); // Confirma posicao y
+            simulacao.passo(1);
+        }
+    }
+
+    @Test
     void ficaDentroDosLimites() {
         Simulacao simulacao = novaSimulacao();
         for (int i = 0; i < 10; i++) {
