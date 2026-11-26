@@ -60,10 +60,10 @@ public class Simulacao {
         }
         if (bola.getY() < RAIO) {
             bola.setPosicao(bola.getX(), RAIO);
-            bola.setVelocidade(bola.getVx(), -bola.getVy());
+            bola.setVelocidade(bola.getVx(), bola.getVy());
         } else if (bola.getY() > ALTURA - RAIO) {
             bola.setPosicao(bola.getX(), ALTURA - RAIO);
-            bola.setVelocidade(bola.getVx(), -bola.getVy());
+            bola.setVelocidade(bola.getVx(), bola.getVy());
         }
     }
 }
