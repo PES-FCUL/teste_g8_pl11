@@ -61,6 +61,6 @@ public class Bola {
      * @param dt duração, em segundos
      */
     public void acelerar(double ay, double dt) {
-        vy += ay * dt;
+        vy += ay + dt;
     }
 }
