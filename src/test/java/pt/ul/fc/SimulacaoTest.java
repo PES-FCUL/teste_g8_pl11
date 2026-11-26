@@ -33,4 +33,20 @@ class SimulacaoTest {
         assertTrue(bola.getY() >= Simulacao.RAIO, "y abaixo do limite: " + bola.getY());
         assertTrue(bola.getY() <= Simulacao.ALTURA - Simulacao.RAIO, "y acima do limite: " + bola.getY());
     }
+
+    @Test
+    void MoveNaDirecaoCorreta(){
+        Simulacao simulacao = novaSimulacao();
+        simulacao.passo(0.1);
+        Bola bola = simulacao.getBola();
+        if (bola.getVx() > 0){
+        assertTrue(bola.getX() > 6.9, "Bola move no sentido positivo de x");}
+        if (bola.getVy() > 0){
+        assertTrue(bola.getY() > 3.8, "Bola move no sentido positivo de y");}
+        if (bola.getVx() < 0){
+        assertTrue(bola.getX() < 6.9, "Bola move no sentido negativo de x");}
+        if (bola.getVy() < 0){
+        assertTrue(bola.getY() < 3.8, "Bola move no sentido negativo de y");}
+
+    }
 }
