@@ -46,7 +46,7 @@ O utilizador tem razão: há **um** erro no código. A correção é pequena.
    coloque *breakpoints* nos métodos chamados pelo seu teste e veja os valores de
    `x`, `y`, `vx` e `vy` passo a passo. Quando encontrar a causa, corrija-a em `src/main`.
    Todos os testes (`mvn test`) devem passar.
-3. **Submeter.** Faça `git push origin fc63778` (para o seu *fork*) e abra um
+3. **Submeter.** Faça `git push origin fc63778` (para o seu *fork*) e abra um 
    *Pull Request* cuja base é o ramo `fc63778` do repositório original.
 
 ### Regras
