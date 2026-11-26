@@ -17,7 +17,7 @@ public class Main {
     public static Simulacao criarSimulacao() {
         return new Simulacao(new Bola(4.2, 5.3, -3.0, 1.4));
     }
-
+ 
     public static void main(String[] args) {
         Simulacao simulacao = criarSimulacao();
         Bola bola = simulacao.getBola();
