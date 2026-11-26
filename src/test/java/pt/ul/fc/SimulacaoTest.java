@@ -22,6 +22,15 @@ class SimulacaoTest {
     }
 
     @Test
+    void velocidadeInicial() {
+        Simulacao simulacao = novaSimulacao();
+        Bola bola = simulacao.getBola();
+        // Antes de qualquer passo, a bola está na posição inicial
+        assertEquals(-1.8, bola.getVx(), EPS);
+        assertEquals(1.2, bola.getVy(), EPS);
+    }
+
+    @Test
     void ficaDentroDosLimites() {
         Simulacao simulacao = novaSimulacao();
         for (int i = 0; i < 10; i++) {
